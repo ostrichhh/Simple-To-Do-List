@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simple To-Do List</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+    <div class="logo">
+        <i class="fas fa-list-check"></i>
+        <h1>Simple To-Do List</h1>
+    </div>
+
+    <!-- Motivational Quotes -->
+    <div class="quotes">
+        <p>"Small steps every day lead to big results."</p>
+        <p>"Your future is created by what you do today, not tomorrow."</p>
+        <p>"Stay consistent, and success will follow."</p>
+    </div>
+
+   
+    <form id="task-form">
+        <div class="form-group">
+            <label for="task-title">Task Title</label>
+            <input type="text" id="task-title" name="task-title" required maxlength="100" />
+        </div>
+        <div class="form-group">
+            <label for="task-desc">Task Description</label>
+            <textarea id="task-desc" name="task-desc" rows="3" maxlength="300"></textarea>
+        </div>
+        <button type="submit" id="add-task-btn">Add Task</button>
+    </form>
+
+    <hr class="separator">
+
+    <!-- Dynamic Task Section -->
+    <h2 id="task-section-title">No tasks to do</h2>
+    <ul id="task-list" aria-live="polite" aria-label="Task List">
+        <!-- Tasks will appear here -->
+    </ul>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
